@@ -1,4 +1,3 @@
-<script>
 function updateTimer() {
   const now = new Date();
   const weddingdate = new Date("April 20, 2024 13:30:00");
@@ -17,5 +16,3 @@ function updateTimer() {
 
 // Update the timer every second
 setInterval(updateTimer, 1000);
-
-</script>
