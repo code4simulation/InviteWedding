@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +19,7 @@
   }
   /* Continue with styles for navigation, footer, etc. */
 </style>
+  <link rel="stylesheet" href="./src/gallery.css">
 </head>
 <body>
 
@@ -38,7 +39,14 @@
   </section>
 
   <section id="gallery">
-    <!-- Add a gallery of images here -->
+    <div class="gallery-grid">
+      <!-- Add your images here -->
+      <img src="./img/1.jpg" alt="Photo 1" onclick="openFullscreen(this);">
+      <img src="./img/2.jpg" alt="Photo 2" onclick="openFullscreen(this);">
+    </div>
+    <div id="fullscreen" class="fullscreen" onclick="closeFullscreen();">
+      <img id="fullscreen-img" src="" alt="Fullscreen Image">
+    </div>
   </section>
 
   <section id="countdown">
@@ -62,6 +70,6 @@
 </footer>
 
 <script src="./src/countdown_timer.js"></script>
-
+<script src="./src/gallery.js"></script>
 </body>
 </html>
