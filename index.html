@@ -76,6 +76,18 @@
     </div>
   </section>
 
+  <section id="show_map">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      var mymap = L.map('mapid').setView([37.51533, 127.10021], 18);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+      }).addTo(mymap);
+    </script>  
+  </section>
+
   <section id="rsvp">
     <!-- Add RSVP form here -->
   </section>
