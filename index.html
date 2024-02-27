@@ -20,6 +20,7 @@
   /* Continue with styles for navigation, footer, etc. */
 </style>
   <link rel="stylesheet" href="./src/gallery.css">
+  <link rel="stylesheet" href="./src/countdown_timer.css">
 </head>
 <body>
 
@@ -43,10 +44,10 @@
       <!-- Add your images here -->
       <img src="./img/1.png" alt="Photo 1" onclick="openFullscreen(this);">
       <img src="./img/2.png" alt="Photo 2" onclick="openFullscreen(this);">
-      <img src="./img/3.png" alt="Photo 3" onclick="openFullscreen(this);">
-      <img src="./img/4.png" alt="Photo 4" onclick="openFullscreen(this);">
-      <img src="./img/5.png" alt="Photo 5" onclick="openFullscreen(this);">
-      <img src="./img/6.png" alt="Photo 6" onclick="openFullscreen(this);">
+	    <img src="./img/3.png" alt="Photo 3" onclick="openFullscreen(this);">
+	    <img src="./img/4.png" alt="Photo 4" onclick="openFullscreen(this);">
+	    <img src="./img/5.png" alt="Photo 5" onclick="openFullscreen(this);">
+	    <img src="./img/6.png" alt="Photo 6" onclick="openFullscreen(this);">
     </div>
     <div id="fullscreen" class="fullscreen" onclick="closeFullscreen();">
       <img id="fullscreen-img" src="" alt="Fullscreen Image">
@@ -55,11 +56,23 @@
 
   <section id="countdown">
     <!-- Add a countdown timer here -->
-    <div id="timer">
-      <span id="days"></span> days
-      <span id="hours"></span> hours
-      <span id="minutes"></span> minutes
-      <span id="seconds"></span> seconds
+    <div id="wedding-countdown">
+      <div class="countdown">
+        <span id="days" class="time"></span>
+        <div class="label">Days</div>
+      </div>
+      <div class="countdown">
+        <span id="hours" class="time"></span>
+        <div class="label">Hours</div>
+      </div>
+      <div class="countdown">
+        <span id="minutes" class="time"></span>
+        <div class="label">Minutes</div>
+      </div>
+      <div class="countdown">
+        <span id="seconds" class="time"></span>
+        <div class="label">Seconds</div>
+      </div>
     </div>
   </section>
 
