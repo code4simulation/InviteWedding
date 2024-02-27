@@ -1,0 +1,41 @@
+#wedding-countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff4e6; /* Soft peach background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.countdown {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.time {
+  display: block;
+  font-size: 40px;
+  color: #d7837f; /* Soft pink */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.label {
+  font-size: 18px;
+  color: #555;
+  text-transform: uppercase;
+}
+
+/* Optional: Add some fancy fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap');
+
+#wedding-countdown {
+  font-family: 'Playfair Display', serif;
+}
+
+.label {
+  font-family: 'Roboto', sans-serif;
+}
