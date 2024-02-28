@@ -4,26 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wedding Invitation</title>
-<style>
-  /* Add your CSS styles here */
-  body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-  }
-  .container {
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  /* Continue with styles for navigation, footer, etc. */
-</style>
+  <link rel="stylesheet" href="./src/main.css">
   <link rel="stylesheet" href="./src/gallery.css">
   <link rel="stylesheet" href="./src/countdown_timer.css">
+  <!-- Link to Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <!-- Swiper's JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
-
 <!-- Navigation (if any) -->
 <nav>
   <!-- Navigation content -->
@@ -44,13 +33,29 @@
       <!-- Add your images here -->
       <img src="./img/1.png" alt="Photo 1" onclick="openFullscreen(this);">
       <img src="./img/2.png" alt="Photo 2" onclick="openFullscreen(this);">
-	    <img src="./img/3.png" alt="Photo 3" onclick="openFullscreen(this);">
-	    <img src="./img/4.png" alt="Photo 4" onclick="openFullscreen(this);">
-	    <img src="./img/5.png" alt="Photo 5" onclick="openFullscreen(this);">
-	    <img src="./img/6.png" alt="Photo 6" onclick="openFullscreen(this);">
+      <img src="./img/3.png" alt="Photo 3" onclick="openFullscreen(this);">
+      <img src="./img/4.png" alt="Photo 4" onclick="openFullscreen(this);">
+      <img src="./img/5.png" alt="Photo 5" onclick="openFullscreen(this);">
+      <img src="./img/6.png" alt="Photo 6" onclick="openFullscreen(this);">
     </div>
     <div id="fullscreen" class="fullscreen" onclick="closeFullscreen();">
       <img id="fullscreen-img" src="" alt="Fullscreen Image">
+    </div>
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="./img/1.png" alt="Image 1" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/2.png" alt="Image 2" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/3.png" alt="Image 3" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/4.png" alt="Image 4" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/5.png" alt="Image 5" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/6.png" alt="Image 6" style="width:100%;height:100%;object-fit:cover;"></div>
+    </div>
+    <div class="swiper-navigation">
+      <button id="goLeft">Left</button>
+      <button id="goHome">Home</button>
+      <button id="goRight">Right</button>
+    </div>
+    <div class="swiper-pagination"></div>
     </div>
   </section>
 
@@ -83,11 +88,11 @@
     <script>
       var latitude = 37.515983;
       var longitude = 127.0995839;
-      var zoom = 18;
+      var zoom = 17.5;
       var mymap = L.map('map').setView([latitude, longitude], zoom);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-      maxZoom: 18,
+      maxZoom: zoom,
       }).addTo(mymap);
 
       // Add a marker for the wedding hall
