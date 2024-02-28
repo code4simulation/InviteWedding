@@ -38,25 +38,16 @@
       <img src="./img/5.png" alt="Photo 5" onclick="openFullscreen(this);">
       <img src="./img/6.png" alt="Photo 6" onclick="openFullscreen(this);">
     </div>
-    <div id="fullscreen" class="fullscreen" onclick="closeFullscreen();">
-      <img id="fullscreen-img" src="" alt="Fullscreen Image">
-    </div>
     <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./img/1.png" alt="Image 1" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="swiper-slide"><img src="./img/2.png" alt="Image 2" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="swiper-slide"><img src="./img/3.png" alt="Image 3" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="swiper-slide"><img src="./img/4.png" alt="Image 4" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="swiper-slide"><img src="./img/5.png" alt="Image 5" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="swiper-slide"><img src="./img/6.png" alt="Image 6" style="width:100%;height:100%;object-fit:cover;"></div>
-    </div>
-    <div class="swiper-navigation">
-      <button id="goLeft">Left</button>
-      <button id="goHome">Home</button>
-      <button id="goRight">Right</button>
+      <div class="swiper-slide"><img src="./img/1.png" alt="Image 1" style="object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/2.png" alt="Image 2" style="object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/3.png" alt="Image 3" style="object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/4.png" alt="Image 4" style="object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/5.png" alt="Image 5" style="object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/6.png" alt="Image 6" style="object-fit:cover;"></div>
     </div>
     <div class="swiper-pagination"></div>
-    </div>
   </section>
 
   <section id="countdown">
@@ -79,10 +70,15 @@
         <div class="label">Seconds</div>
       </div>
     </div>
+	<div class="calendar-container">
+      <div class="calendar-header">Our Wedding Day</div>
+      <div class="date-display">Saturday, 24th June 2024</div>
+      <div class="wedding-day">Mark your calendars!</div>
+    </div>
   </section>
 
   <section id="show_map">
-    <div id="map" style="width: 600px; height: 400px;"></div>
+    <div id="map" style="width: 100%; height: 50vh;"></div>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="./src/showmap.js"></script>
@@ -100,7 +96,6 @@
 
 <script src="./src/countdown_timer.js"></script>
 <script src="./src/gallery.js"></script>
-<script src="./src/swiper.js"></script>
 
 </body>
 </html>
