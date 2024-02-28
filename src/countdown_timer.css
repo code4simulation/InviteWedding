@@ -1,3 +1,6 @@
+/* Optional: Add some fancy fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap');
+
 #wedding-countdown {
   display: flex;
   justify-content: center;
@@ -28,9 +31,6 @@
   color: #555;
   text-transform: uppercase;
 }
-
-/* Optional: Add some fancy fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap');
 
 #wedding-countdown {
   font-family: 'Playfair Display', serif;
