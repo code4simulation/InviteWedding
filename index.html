@@ -85,20 +85,7 @@
     <div id="map" style="width: 600px; height: 400px;"></div>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-      var latitude = 37.515983;
-      var longitude = 127.0995839;
-      var zoom = 17.5;
-      var mymap = L.map('map').setView([latitude, longitude], zoom);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-      maxZoom: zoom,
-      }).addTo(mymap);
-
-      // Add a marker for the wedding hall
-      var marker = L.marker([latitude, longitude]).addTo(mymap);
-      marker.bindPopup("<b>아펠가모 잠실</b>").openPopup();
-    </script>  
+    <script src="./src/showmap.js"></script>
   </section>
 
   <section id="rsvp">
@@ -113,5 +100,7 @@
 
 <script src="./src/countdown_timer.js"></script>
 <script src="./src/gallery.js"></script>
+<script src="./src/swiper.js"></script>
+
 </body>
 </html>
