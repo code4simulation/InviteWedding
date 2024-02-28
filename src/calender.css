@@ -1,0 +1,101 @@
+
+/* Calendar Container */
+.calendar-container {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff4e6; /* Soft background color */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Calendar Header */
+.calendar-header {
+  font-size: 24px;
+  color: #d7837f; /* Soft pink for text */
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif; /* Elegant font */
+}
+
+/* Date Display */
+.date-display {
+  font-size: 20px;
+  color: #555;
+  padding: 10px 0;
+  background-color: #f9f3f0; /* Lighter background for contrast */
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* Wedding Day Specific Style */
+.wedding-day {
+  color: #ffffff; /* White text */
+  background-color: #d7837f; /* Matching the header, soft pink */
+  padding: 15px 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.calendar {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: fit-content;
+  margin: auto;
+}
+
+.month {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.weekdays div, .days div {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.special-day {
+  color: #d14;
+  font-weight: bold;
+  position: relative;
+}
+
+.special-day span {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  background-color: #d14;
+  color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 0.7em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.week-separator {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* Make sure your days container is a flexbox */
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.empty-day {
+  width: 40px;
+  height: 40px;
+}
