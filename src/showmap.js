@@ -1,6 +1,7 @@
 var latitude = 37.515983;
 var longitude = 127.0995839;
 var zoom = 17.5;
+
 var mymap = L.map('map').setView([latitude, longitude], zoom);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
