@@ -54,14 +54,13 @@
   margin-bottom: 10px;
 }
 
-.weekdays div, .days div {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  margin: 5px;
-  font-size: 0.9em;
-  color: #666;
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* This creates 7 columns of equal width */
+  grid-gap: 10px; /* This adds space between the grid items */
+  flex-wrap: wrap;
+  justify-content: start;
+  text-align: center;
 }
 
 .special-day {
@@ -83,16 +82,18 @@
   font-size: 0.7em;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
-.week-separator {
-  flex-basis: 100%;
-  height: 0;
-}
 
-/* Make sure your days container is a flexbox */
 .days {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* This creates 7 columns of equal width */
+  grid-gap: 10px; /* This adds space between the grid items */
   flex-wrap: wrap;
   justify-content: start;
+  text-align: center;
+}
+
+.sunday {
+  color: red;
 }
 
 .empty-day {
