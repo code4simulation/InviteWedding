@@ -3,7 +3,7 @@ var hall_lat  = 37.515983;
 var hall_long = 127.0995839;
 var c_lat  = 37.51475;
 var c_long = 127.10030;
-var zoom = 18;
+var zoom = 17;
 
 var mymap = L.map('map').setView([c_lat, c_long], zoom);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
