@@ -1,7 +1,8 @@
 // Variables for the URL and image source
 var linksData = [
   {linkUrl: info.Naver, imageUrl: "./img/icon_NAVER-Map.png", altText: "NAVER Map", idLink: "naver-link"},
-  {linkUrl: info.Google, imageUrl: "./img/icon_GOOGLE-Map.png", altText: "Google Map", idLink: "google-link"}
+  {linkUrl: info.Google, imageUrl: "./img/icon_GOOGLE-Map.png", altText: "Google Map", idLink: "google-link"},
+  {linkUrl: info.Kakao, imageUrl: "./img/icon_KAKAO-Map.png", altText: "Kakao Map", idLink: "kakao-link"}
 ];
 
 linksData.forEach(function(data) {
