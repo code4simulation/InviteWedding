@@ -30,6 +30,10 @@ function generateCalendarDays(year, month, weddingday) {
 }
 
 // Run the function to generate calendar days
+const dateObject = new Date(info.WeddingDate);
+const year = dateObject.getFullYear();
+const month = dateObject.getMonth() + 1;
+const day = dateObject.getDate();
 document.addEventListener('DOMContentLoaded', function() {
-  generateCalendarDays(2024, 12, 25); // Example parameters, adjust as needed
+  generateCalendarDays(year, month, day);
 });
