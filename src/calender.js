@@ -6,7 +6,13 @@ function generateCalendarDays(year, month, weddingday) {
   const firstDayOfMonth = new Date(year, month_id, 1).getDay();
   const daysInMonth = new Date(year, month_id + 1, 0).getDate();
   
-  //weekContainer = `<div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>`;
+  // Define the names of the week
+  const weekDays = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+  // Clear any existing content in the weekdays container
+  weekContainer.innerHTML = '<div class="weekday"><div class="sunday">SUN</div></div>';
+  // Populate the weekdays container with the names of the week
+  weekDays.forEach(dayName => {weekContainer.innerHTML += `<div class="weekday">${dayName}</div>`;});
+  
   // Placeholder for days before the first day of the month
   for (let i = 0; i < firstDayOfMonth; i++) {
     daysContainer.innerHTML += '<div class="empty-day"></div>';
@@ -14,15 +20,12 @@ function generateCalendarDays(year, month, weddingday) {
 
   // Actual days of the month
   for (let day = 1; day <= daysInMonth; day++) {
-    let dayHTML = `<div class="day">${day}</div>`;
-      if (day === weddingday) {
-        dayHTML = `<div class="day special-day">${day}<span class="wedding-day-marker">Wed 12:30</span></div>`;
-      }
-    daysContainer.innerHTML += dayHTML;
-    // Check if it's the end of the week
-    if ((day + firstDayOfMonth) % 7 === 0) {
-      daysContainer.innerHTML += '<div class="week-separator"></div>'; // Line break after every week (7 days)
+    let dayOfWeek = new Date(year, month - 1, day).getDay();
+    let dayHTML = `<div class="day${dayOfWeek === 0 ? ' sunday' : ''}">${day}</div>`;
+    if (day === weddingday) {
+      dayHTML = `<div class="day special-day${dayOfWeek === 0 ? ' sunday' : ''}">${day}<span class="wedding-day-marker">Wed</span></div>`;
     }
+    daysContainer.innerHTML += dayHTML;
   }
 }
 
