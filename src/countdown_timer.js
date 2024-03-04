@@ -1,6 +1,22 @@
 function updateTimer() {
   const now = new Date();
-  const weddingdate = new Date("December 25, 2024 13:30:00");
+  // Convert the string to a Date object
+  const dateObject = new Date(info.WeddingDate);
+  // Extract components using Intl.DateTimeFormat
+  const formattedDate = new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit'
+  }).format(dateObject);
+  const formattedTime = new Intl.DateTimeFormat('en-US', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false // Use 24-hour format
+  }).format(dateObject);
+  // Combine the formatted date and time with a comma
+  const formattedDateTime = `${formattedDate}, ${formattedTime}`;
+  const weddingdate = new Date(formattedDateTime);
   const diff = weddingdate - now;
 
   let days = Math.floor(diff / (1000 * 60 * 60 * 24));
