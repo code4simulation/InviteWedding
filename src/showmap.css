@@ -1,0 +1,14 @@
+.link-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  place-items: center; /* Horizontally center the items within the container */
+}
+
+
+#naver-link a img, #google-link a img {
+  width: 120px;
+  height: 120px;
+  margin: 10px; /* Optional: Adds some space around items */
+  object-fit: scale-down;
+}
