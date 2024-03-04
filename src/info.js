@@ -1,6 +1,6 @@
 const info = {
   // 결혼 날짜, 신랑, 신부, 연락처, 계좌 등 정보를 입력하세요.
-  "WeddingDate": "2024-05-20",
+  "WeddingDate": "2024-05-20T13:00:00",
   "Groom": "Sin-Rang",
   "GroomPhone": "01012345678",
   "Bride": "Sin-Bu",
