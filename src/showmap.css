@@ -5,7 +5,7 @@
   place-items: center; /* Horizontally center the items within the container */
 }
 
-#naver-link a img, #google-link a img {
+#naver-link a img, #google-link a img, #kakao-link a img  {
   width: 120px;
   height: 120px;
   margin: 10px; /* Optional: Adds some space around items */
