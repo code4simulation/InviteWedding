@@ -9,6 +9,7 @@ const info = {
   // 장소에 관련된 정보들을 입력하세요
   "WeddingHall": "<b> 아펠가모 잠실 </b>",
   "Naver": "https://naver.me/xV3xjR82",
+  "Google": "https://maps.app.goo.gl/UkBXWxTfkrPcWi6k8",
   "hall_lat":  37.515983,
   "hall_long": 127.0995839,
   "center_lat":  37.515983,
