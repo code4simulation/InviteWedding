@@ -1,50 +1,11 @@
-
-/* Calendar Container */
-.calendar-container {
-  max-width: 300px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fff4e6; /* Soft background color */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* Calendar Header */
-.calendar-header {
-  font-size: 24px;
-  color: #d7837f; /* Soft pink for text */
-  margin-bottom: 20px;
-  font-family: 'Playfair Display', serif; /* Elegant font */
-}
-
-/* Date Display */
-.date-display {
-  font-size: 20px;
-  color: #555;
-  padding: 10px 0;
-  background-color: #f9f3f0; /* Lighter background for contrast */
-  margin-bottom: 15px;
-  border-radius: 5px;
-}
-
-/* Wedding Day Specific Style */
-.wedding-day {
-  color: #ffffff; /* White text */
-  background-color: #d7837f; /* Matching the header, soft pink */
-  padding: 15px 0;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
 .calendar {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  background-color: #fff;
+  background-color: #fff; /* #fff; white, #fff4e6; Soft peach background */
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: fit-content;
+  width: fit-content;/*fit-content; 100%;*/
   margin: auto;
 }
 
@@ -57,7 +18,16 @@
 .weekdays {
   display: grid;
   grid-template-columns: repeat(7, 1fr); /* This creates 7 columns of equal width */
-  grid-gap: 10px; /* This adds space between the grid items */
+  grid-gap: 20px; /* This adds space between the grid items */
+  flex-wrap: wrap;
+  justify-content: start;
+  text-align: center;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* This creates 7 columns of equal width */
+  grid-gap: 20px; /* This adds space between the grid items */
   flex-wrap: wrap;
   justify-content: start;
   text-align: center;
@@ -71,8 +41,8 @@
 
 .special-day span {
   position: absolute;
-  right: -10px;
-  bottom: -10px;
+  right: -15px;
+  bottom: -15px;
   background-color: #d14;
   color: #fff;
   border-radius: 50%;
@@ -83,20 +53,6 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr); /* This creates 7 columns of equal width */
-  grid-gap: 10px; /* This adds space between the grid items */
-  flex-wrap: wrap;
-  justify-content: start;
-  text-align: center;
-}
-
 .sunday {
   color: red;
-}
-
-.empty-day {
-  width: 40px;
-  height: 40px;
 }
