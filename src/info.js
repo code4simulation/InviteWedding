@@ -3,9 +3,13 @@ const info = {
   "WeddingDate": "2024-05-19T13:00:00",
   "Groom": "Sin-Rang",
   "GroomPhone": "01012345678",
+  "GroomBank": "A은행",
+  "GroomAccount": "123456789",
   "Bride": "Sin-Bu",
   "BridePhone": "01087654321",
-
+  "BrideBank": "B은행",
+  "BrideAccount": "123456789",
+  
   // 장소에 관련된 정보들을 입력하세요
   "WeddingHall": "<b> 아펠가모 잠실 </b>",
   "Naver": "https://naver.me/xV3xjR82",
