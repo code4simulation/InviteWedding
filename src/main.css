@@ -1,3 +1,8 @@
+:root {
+  --main-bg-color: #fff4e6; /* Soft peach background */
+  --max-window: 600px;
+}
+
 @media {
   body {
     font-family: 'Open Sans', sans-serif;
@@ -7,14 +12,25 @@
     background-color: #fff4e6;
   }
 }
+
+/* PC 환경에서 모바일처럼 보여주고 싶을 때 outer margin의 배경색을 조절하세요. */
+.outer {
+  width: 100%;
+  max-width: var(--max-window);
+  padding: 0;
+  margin: auto;
+  background: var(--main-bg-color);
+}
+
 .MainContainer {
   width: 100%; /* Full width on smaller screens */
-  max-width: 1200px; /* Maximum width on larger screens */
+  max-width: var(--max-window); /* Maximum width on larger screens */
   margin-left: auto; /* Center the container */
   margin-right: auto; /* Center the container */
   padding: 20px; /* Optional: Padding inside the container */
   box-sizing: border-box;
 }
+
 @media {
   .item {
     float: left;
