@@ -13,7 +13,7 @@
   object-fit: cover; /* Cover the area nicely */
 }
 
-.main info2{
+.main info{
   flex: 1; /* Take the remaining space */
   overflow: auto; /* In case content is too long */
 }
