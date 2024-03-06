@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main img {
+  width: auto; /* Adjust width automatically */
+  height: 80vh; /* 80% of the viewport height */
+  object-fit: cover; /* Cover the area nicely */
+}
+
+.main info2{
+  flex: 1; /* Take the remaining space */
+  overflow: auto; /* In case content is too long */
+}
