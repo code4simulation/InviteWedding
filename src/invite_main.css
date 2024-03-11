@@ -1,4 +1,4 @@
-.main {
+.invite_main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,13 +7,13 @@
   height: 100vh;
 }
 
-.main img {
-  width: auto; /* Adjust width automatically */
+.invite_main img {
+  max-width: 430px; /* Adjust width automatically */
   height: 80vh; /* 80% of the viewport height */
   object-fit: cover; /* Cover the area nicely */
 }
 
-.main info{
+.invite_main info{
   flex: 1; /* Take the remaining space */
-  overflow: auto; /* In case content is too long */
+  overflow: auto;  /*In case content is too long */
 }
