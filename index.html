@@ -16,7 +16,6 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
-<!-- Navigation (if any) -->
 <nav>
   <!-- Navigation content -->
 </nav>
@@ -34,32 +33,16 @@
     </div>
   </section>
 
+  <section id="greeting">
+    <div class="greeting">
+      <div class="greeting_title"></div>
+      <div class="greeting_content"></div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="contact_groom"></div>
     <div class="contact_bride"></div>
-  </section>
-
-  <section id="gallery">
-    <div class="gallery-grid">
-      <!-- Add your images here -->
-      <img src="./img/1.png" alt="Photo 1" onclick="openFullscreen(this);">
-      <img src="./img/2.png" alt="Photo 2" onclick="openFullscreen(this);">
-      <img src="./img/3.png" alt="Photo 3" onclick="openFullscreen(this);">
-      <img src="./img/4.png" alt="Photo 4" onclick="openFullscreen(this);">
-      <img src="./img/5.png" alt="Photo 5" onclick="openFullscreen(this);">
-      <img src="./img/6.png" alt="Photo 6" onclick="openFullscreen(this);">
-    </div>
-    <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="./img/1.png" alt="Image 1" style="object-fit:cover;"></div>
-      <div class="swiper-slide"><img src="./img/2.png" alt="Image 2" style="object-fit:cover;"></div>
-      <div class="swiper-slide"><img src="./img/3.png" alt="Image 3" style="object-fit:cover;"></div>
-      <div class="swiper-slide"><img src="./img/4.png" alt="Image 4" style="object-fit:cover;"></div>
-      <div class="swiper-slide"><img src="./img/5.png" alt="Image 5" style="object-fit:cover;"></div>
-      <div class="swiper-slide"><img src="./img/6.png" alt="Image 6" style="object-fit:cover;"></div>
-    </div>
-    <div class="swiper-pagination"></div>
-	</div>
   </section>
 
   <section id="countdown">
@@ -90,6 +73,29 @@
       <div class="weekdays"></div>
       <div class="days"></div>
     </div>
+  </section>
+  
+  <section id="gallery">
+    <div class="gallery-grid">
+      <!-- Add your images here -->
+      <img src="./img/1.png" alt="Photo 1" onclick="openFullscreen(this);">
+      <img src="./img/2.png" alt="Photo 2" onclick="openFullscreen(this);">
+      <img src="./img/3.png" alt="Photo 3" onclick="openFullscreen(this);">
+      <img src="./img/4.png" alt="Photo 4" onclick="openFullscreen(this);">
+      <img src="./img/5.png" alt="Photo 5" onclick="openFullscreen(this);">
+      <img src="./img/6.png" alt="Photo 6" onclick="openFullscreen(this);">
+    </div>
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="./img/1.png" alt="Image 1" style="object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/2.png" alt="Image 2" style="object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/3.png" alt="Image 3" style="object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/4.png" alt="Image 4" style="object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/5.png" alt="Image 5" style="object-fit:cover;"></div>
+      <div class="swiper-slide"><img src="./img/6.png" alt="Image 6" style="object-fit:cover;"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+	</div>
   </section>
 
   <section id="show_map">
@@ -128,5 +134,6 @@ document.addEventListener('copy', function(e) {
   e.preventDefault();
 }, false);
 </script>
+
 </body>
 </html>
