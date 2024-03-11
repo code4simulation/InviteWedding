@@ -1,6 +1,6 @@
 :root {
   --main-bg-color: #fff4e6; /* Soft peach background */
-  --max-window: 600px;
+  --max-window: 430px;
 }
 
 @media {
