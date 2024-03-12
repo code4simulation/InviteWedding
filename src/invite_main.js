@@ -17,4 +17,10 @@ const infoContainer = document.querySelector('.invite_main .info');
 //infoContainer.innerHTML = `<b>${year}년 ${month}월 ${day}일 ${strTime}\n${info.WeddingHall}</b>`
 
 // 24시간 기준
-infoContainer.innerHTML = `<b>${year}년 ${month}월 ${day}일 ${Time}\n${info.WeddingHall}</b>`
+infoContainer.innerHTML = `${year}년 ${month}월 ${day}일 ${Time}<br>${info.WeddingHall}`
+
+document.querySelector('.info').style.fontFamily = "'Arial', sans-serif";
+document.querySelector('.info').style.fontSize = "2rem";
+document.querySelector('.info').style.fontWeight = "bold";
+document.querySelector('.info').style.color = "#49413a";
+document.querySelector('.info').style.textAlign = 'center';
