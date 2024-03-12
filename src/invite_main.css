@@ -14,6 +14,11 @@
 }
 
 .invite_main info{
-  flex: 1; /* Take the remaining space */
+  /*flex: 1;  Take the remaining space */
   overflow: auto;  /*In case content is too long */
+  text-align: center; /* Centers the text horizontally */
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center; /* Centers the content vertically if needed */
+
 }
