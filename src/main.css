@@ -9,7 +9,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #fff4e6;
+    background-color: var(--main-bg-color);
   }
 }
 
@@ -27,14 +27,6 @@
   max-width: var(--max-window); /* Maximum width on larger screens */
   margin-left: auto; /* Center the container */
   margin-right: auto; /* Center the container */
-  padding: 20px; /* Optional: Padding inside the container */
+  padding: 10px; /* Optional: Padding inside the container */
   box-sizing: border-box;
-}
-
-@media {
-  .item {
-    float: left;
-    width: 100%; /* Full width on mobile */
-    padding: 10px;
-  }
 }
