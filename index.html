@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Wedding Invitation</title>
   <link rel="stylesheet" href="./src/main.css">
   <link rel="stylesheet" href="./src/invite_main.css">
@@ -35,17 +35,20 @@
 
   <section id="greeting">
     <div class="greeting">
-      <div class="greeting_title"></div>
+      <div class="section_title">인사말</div>
       <div class="greeting_content"></div>
       <div class="greeting_name"></div>
     </div>
   </section>
-
-  <section id="contact">
-    <div class="contact_groom"></div>
-    <div class="contact_bride"></div>
+  
+  <section id="calender">
+    <div class="calendar">
+      <div class="month"></div>
+      <div class="weekdays"></div>
+      <div class="days"></div>
+    </div>
   </section>
-
+  
   <section id="countdown">
     <!-- Add a countdown timer here -->
     <div id="wedding-countdown">
@@ -67,16 +70,15 @@
       </div>
     </div>
   </section>
-  
-  <section id="calender">
-    <div class="calendar">
-      <div class="month"></div>
-      <div class="weekdays"></div>
-      <div class="days"></div>
-    </div>
+
+  <section id="contact">
+    <div class="section_title">마음 전하실 곳</div>
+    <div class="contact_groom"></div>
+    <div class="contact_bride"></div>
   </section>
-  
+
   <section id="gallery">
+    <div class="section_title">갤러리</div>
     <div class="gallery-grid">
       <!-- Add your images here -->
       <img src="./img/1.png" alt="Photo 1" onclick="openFullscreen(this);">
@@ -100,6 +102,7 @@
   </section>
 
   <section id="show_map">
+    <div class="section_title">오시는 길</div>
     <div class="link-container">
       <div id="naver-link"></div>
       <div id="google-link"></div>
@@ -123,17 +126,18 @@
 </footer>
 
 <script src="./src/invite_main.js"></script>
+<script src="./src/greeting.js"></script>
 <script src="./src/countdown_timer.js"></script>
 <script src="./src/gallery.js"></script>
 <script src='./src/calender.js'></script>
+<script src='./src/titles.js'></script>
 <script>
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-}, false);
-
-document.addEventListener('copy', function(e) {
-  e.preventDefault();
-}, false);
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  }, false);
+  document.addEventListener('copy', function(e) {
+    e.preventDefault();
+  }, false);
 </script>
 
 </body>
