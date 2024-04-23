@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Wedding Invitation</title>
+  <script src='./src/info.js'></script>
+</head>
+<body>
+<nav>
+  <!-- Navigation content -->
+</nav>
+
+<!-- Main content -->
+<main>
+  <div class='MainContainer'>
+    <section id="invite_main">
+      <div class="invite_main">
+        <div class="img">
+          <img src="./img/main.png" alt="Main">
+        </div>
+        <div class="info"></div>
+        <div class="info2"></div>
+      </div>
+    </section>
+
+    <section id="greeting">
+    <div class="greeting">
+      <div class="section_title">* Greetings *</div>
+      <div class="greeting_content"></div>
+    </div>
+    </section>
+
+    <section id="calender">
+      <div class="section_title">4월</div>
+      <div class="calendar_table"></div>
+    </section>
+  </div>  <!--MainContainer-->
+</main>
+
+<script>
+  const CalenderMarkerBackgroundColor = '#FF6865';
+  const CalenderMarkerColor = 'black';
+  const ContainerMaxWidth = '430px';
+  const SectionMargin = '20px';
+  const DivMargin = '10px';
+  const calenderPadding = 20;
+  
+  const Dday = new Date(info.WeddingDate);
+  const year = Dday.getFullYear();
+  const month = Dday.getMonth() + 1;
+  const weddingday = Dday.getDate();
+
+  document.addEventListener('DOMContentLoaded', function(){
+  // css for section_title
+  document.querySelectorAll('.section_title').forEach(function(Title){
+    Title.style.marginTop = `${SectionMargin}`;
+    Title.style.marginBottom = `${SectionMargin}`;
+    Title.style.fontFamily = "'Arial', sans-serif";
+    Title.style.fontSize = "1.5rem";
+    Title.style.fontWeight = "bold";
+    Title.style.color = "#49413a";
+    Title.style.textAlign = 'center'; 
+  });
+
+  const MainContainer = document.querySelector('.MainContainer');
+  MainContainer.style.display = 'flex';
+  MainContainer.style.flexDirection = 'column'; // 세로 방향으로 설정
+  MainContainer.style.width = '100%'; /* Full width on smaller screens */
+  MainContainer.style.maxWidth = `${ContainerMaxWidth}`; /* Maximum width on larger screens */
+  MainContainer.style.marginLeft = 'auto'; /* Center the container */
+  MainContainer.style.marginRight = 'auto'; /* Center the container */
+
+  // js for invite_main
+  // invite_main 컨테이너 설정
+  const inviteMainContainer = document.querySelector('.invite_main');
+  inviteMainContainer.style.display = 'flex';
+  inviteMainContainer.style.flexDirection = 'column';
+  inviteMainContainer.style.justifyContent = 'center';
+  inviteMainContainer.style.alignItems = 'center';
+  inviteMainContainer.style.height = '100vh';
+  // 이미지 설정
+  const imgContainer = document.querySelector('.invite_main img');
+  imgContainer.style.maxWidth = '100%';  // 이미지 너비를 컨테이너에 맞춤
+  imgContainer.style.height = '80vh';
+  imgContainer.style.objectFit = 'cover';  // 이미지가 컨테이너를 꽉 채우도록 설정
+  // Info 컨테이너 설정
+  const infoContainer = document.querySelector('.invite_main .info');
+  infoContainer.style.width = '100%'; // 폭 100%
+  infoContainer.style.textAlign = 'center'; // 텍스트 가로 중앙 정렬
+  infoContainer.style.fontFamily = "'Arial', sans-serif";
+  infoContainer.style.fontSize = '2rem';
+  infoContainer.style.color = '#49413a';
+  infoContainer.style.display = "flex";
+  infoContainer.style.justifyContent = "center";
+  infoContainer.style.alignItems = "center";
+  infoContainer.style.flexDirection = "column";
+  
+  // js for greeting
+  const greetingContainer = document.querySelector('.greeting');
+  greetingContainer.style.fontFamily = "'Arial', sans-serif";
+  greetingContainer.style.fontSize = "1.0rem";
+  greetingContainer.style.fontWeight = "bold";
+  greetingContainer.style.color = "#49413a";
+  greetingContainer.style.textAlign = 'center';
+  greetingContainer.style.display = "flex";
+  greetingContainer.style.justifyContent = "center";
+  greetingContainer.style.alignItems = "center";
+  greetingContainer.style.flexDirection = "column";
+  const greetingContent = document.querySelector('.greeting .greeting_content');
+  greetingContent.innerHTML = `${info.Greetings}`;
+  greetingContent.style.letterSpacing = '1.5px';
+  greetingContent.style.fontSize = '1.1rem';
+  greetingContent.style.marginTop = `${SectionMargin}`
+  greetingContent.style.marginBottom = `${SectionMargin}`
+  const greetingName = document.querySelector('.greeting .greeting_name');
+  greetingName.style.letterSpacing = '1.5px';
+  greetingName.style.fontSize = '0.9rem';
+  greetingName.style.marginTop = `${DivMargin}`
+  greetingName.style.marginBottom = `${DivMargin}`
+  greetingName.innerHTML = `<div class="name-row"><span class="name">${info.GroomDad}</span><span class="separator">·</span><span class="name">${info.GroomMom}</span><span class="relation">의</span><span class="title">아들</span><span class="name">${info.Groom}</span></div>`;
+  greetingName.innerHTML += `<br>`;
+  greetingName.innerHTML += `<div class="name-row"><span class="name">${info.BrideDad}</span><span class="separator">·</span><span class="name">${info.BrideMom}</span><span class="relation">의</span><span class="title">딸</span><span class="name">${info.Bride}</span></div>`;
+
+  const nameRows = document.querySelectorAll('.name-row');
+  nameRows.forEach(function(row) {
+    row.style.display = 'flex';
+    row.style.justifyContent = 'space-between';
+    row.style.alignItems = 'center';
+    const nameSpans = row.querySelectorAll('.name');
+    nameSpans.forEach(function(span) {
+      span.style.flex = '2';
+      span.style.textAlign = 'center';
+    });
+    const separators = document.querySelectorAll('.nmae-row .separator');
+    separators.forEach(function(separator) {
+      separator.style.flex = '0';
+    });
+    const relations = document.querySelectorAll('.nmae-row .relation');
+    relations.forEach(function(relation) {
+      relation.style.flex = '0';
+    });
+    const titles = row.querySelectorAll('.title');
+    titles.forEach(function(title) {
+      title.style.textAlign = 'right';
+      title.style.flex = '1';
+    });
+  });
+  }); // DOMContentLoaded
+
+  // js for calender
+  const calendarContainer = document.querySelector('.calendar_table');
+  calendarContainer.style.cssText = "text-align: center; background-color: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 20px;";
+  const date = new Date();
+  const month_id = month - 1;
+  const firstDayOfMonth = new Date(year, month_id, 1).getDay();
+  const daysInMonth = new Date(year, month_id + 1, 0).getDate();
+  //const weekDays = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+  const weekDays = ['일', '월', '화', '수', '목', '금', '토'];
+
+  // Create the table and header row for weekdays
+  const table = document.createElement('table');
+  table.style.width = '100%';
+  const headerRow = document.createElement('tr');
+  weekDays.forEach(dayName => {
+    const headerCell = document.createElement('th');
+    headerCell.textContent = dayName;
+    headerCell.style.color = dayName === '일' ? 'red' : 'black';
+    headerCell.style.padding = '10px 0'; // 헤더 셀의 상하 패딩 지정
+    headerRow.appendChild(headerCell);
+  });
+  table.appendChild(headerRow);
+
+  // Create rows for days
+  let row = document.createElement('tr');
+  
+  // Empty cells for days before first day of the month
+  for (let i = 0; i < firstDayOfMonth; i++) {
+    const emptyCell = document.createElement('td');
+    row.appendChild(emptyCell);
+  }
+
+  // Days of the month
+  for (let day = 1; day <= daysInMonth; day++) {
+    if ((firstDayOfMonth + day - 1) % 7 === 0 && day !== 1) { // Start a new row each week
+      table.appendChild(row);
+      row = document.createElement('tr');
+    }
+    const dayCell = document.createElement('td');
+    
+    dayCell.style.width = '40px';
+    dayCell.style.height = '40px';
+    dayCell.style.lineHeight = '40px';
+    dayCell.textContent = day;
+    if ((firstDayOfMonth + day - 1) % 7 === 0) { // Sunday
+      dayCell.style.color = 'red';
+    }
+    if (day === weddingday) {
+      dayCell.style.backgroundColor = `${CalenderMarkerBackgroundColor}`;
+      dayCell.style.color = `${CalenderMarkerColor}`;
+      dayCell.style.borderRadius = '50%';
+      dayCell.style.textAlign = 'center';
+      dayCell.style.verticalAlign = 'middle';
+      dayCell.style.fontWeight = 'bold';
+    } else if ((firstDayOfMonth + day - 1) % 7 === 0) { // Sunday
+      dayCell.style.color = 'red';
+    }
+    row.appendChild(dayCell);
+  }
+  table.appendChild(row); // Append the last row
+  calendarContainer.innerHTML = ''; // Clear previous contents
+  calendarContainer.appendChild(table); // Append the new calendar
+  const cellSize = (window.innerWidth - calenderPadding) / 7;
+  
+  // js for countdown timer
+
+  let hours = Dday.getHours();
+  const minutes = Dday.getMinutes();
+  const ampm = hours >= 12 ? '오후' : '오전';
+  hours12 = hours % 12;
+  hours12 = hours12 ? hours12 : 12; // the hour '0' should be '12'
+
+  const infoContainer = document.querySelector('.invite_main .info');
+  //const strTime = ampm + ' ' + hours12 + ':' + (minutes < 10 ? '0' + minutes : minutes);
+  //infoContainer.innerHTML = `${year}년 ${month}월 ${day}일 ${strTime}<br>${info.WeddingHall}`;
+  const Time = hours + ':' + (minutes < 10 ? '0' + minutes : minutes);
+  infoContainer.innerHTML = `${year}년 ${month}월 ${weddingday}일 ${Time}`;
+  infoContainer.innerHTML += `<br>${info.WeddingHall}`;
+  const infoContainer2 = document.querySelector('.invite_main .info2');
+  infoContainer2.innerHTML = `${info.PlaceAddress}`;
+</script>
+
+</body>
+</html>
